@@ -1,22 +1,29 @@
-# Sistema de Usuarios - Django
+# Sistema de Usuarios con Django
 
-Proyecto básico de sistema de usuarios desarrollado con Django.
+Aplicación web desarrollada con Django que implementa un sistema completo de gestión de usuarios.
 
 ## Funcionalidades
-- Login y Logout
-- Vista protegida (dashboard)
-- Listado de perfiles
-- Panel de administración
+- Registro de usuarios
+- Inicio y cierre de sesión
+- Dashboard protegido
+- Perfil de usuario asociado (OneToOne)
+- Panel de administración Django
+- Mensajes de feedback al usuario
+- Navegación dinámica según autenticación
 
-## Tecnologías
+## Tecnologías utilizadas
 - Python
 - Django
 - HTML
 - CSS
 - SQLite
 
-## Cómo ejecutar
+## Instalación y ejecución
 1. Crear entorno virtual
 2. Instalar dependencias
 3. Ejecutar migraciones
-4. Correr servidor
+4. Ejecutar servidor de desarrollo
+
+```bash
+python manage.py runserver
+
