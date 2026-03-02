@@ -1,11 +1,11 @@
 from django.db import models
-from django.utils import timezone
+from django.contrib.auth.models import User
 
-# Create your models here.
 class Perfil(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
-    fecha_creacion = models.DateTimeField(default=timezone.now)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.nombre} ({self.email})"
+        return self.user.username
+
